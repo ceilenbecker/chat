@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>Your own chat !</title>
+    <meta charset="utf-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <style type="text/css">
+        #panel-room{
+            display: none
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <!-- SIGNIN -->
+        <div id="panel-signin" class="panel panel-primary">
+            <div class="panel-heading">Signin</div>
+            <div class="panel-body">
+                <form action="" method="post" id="form-signin" class="form-inline">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" value="" placeholder="Username" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" value="" placeholder="Password" class="form-control" />
+                    </div>
+                    <input id="submit-signin" type="submit" value="OK" class="btn btn-success" />
+                </form>
+            </div>
+        </div>
+        <!-- SIGNUP -->
+        <div id="panel-signup" class="panel panel-primary">
+            <div class="panel-heading">Signup</div>
+            <div class="panel-body">
+                <form action="" method="post" id="form-signup" class="form-inline">
+                    <div class="form-group">
+                        <label for="username2">Username</label>
+                        <input type="text" name="username" id="username2" value="" placeholder="Choose a username" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password2">Password</label>
+                        <input type="password" name="password" id="password2" value="" placeholder="Your password" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Confirm</label>
+                        <input type="password" name="confirm" id="confirm" value="" placeholder="Confirm your password" class="form-control" />
+                    </div>
+                    <input id="submit-signup" type="submit" value="OK" class="btn btn-success" />
+                </form>
+            </div>
+        </div>
+        <!-- MESSAGES -->
+        <div id="panel-room" class="panel panel-primary">
+            <div class="panel-heading">Rooms' messages</div>
+            <div class="panel-body">
+                <form action="" method="post" id="form-room">
+                    <select id="room" name="room" class="form-control">
+                        <option value="0">choose</option>
+                    </select>
+                </form>
+                <br>
+                <table class="table" id="chatContent">
+                <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Datetime</th>
+                    <th>Message</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                </table>
+                <br>
+
+                <!-- ADD MESSAGE -->
+                <form action="" method="post" id="form-message">
+                    <div class="col-md-10 col-sm-8">
+                        <input type="text" name="message" id="message" value="" maxlength="255" placeholder="Put your message here" class="form-control form-control-lg" />
+                    </div>
+                    <div class="col-md-2 col-sm-4">
+                        <input id="submit-message" type="submit" value="Add" class="btn btn-success" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div class="panel panel-primary">
+                <div class="panel-body text-center">&copy; proGweb - Webforce3 - Numericall</div>
+            </div>
+        </footer>
+    </div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/front.js"></script>
+</body>
+</html>
